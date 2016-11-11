@@ -12,16 +12,17 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    ofFill();
-    ofSetColor(255, 0, 0);
-    ofDrawCircle(50, 50, 50);
+    float x = 40;
+    float y = 40;
+    float radius = 10;
     
-    ofSetColor(0, 255, 0, 50);
-    ofDrawCircle(ofGetWidth()-50, ofGetHeight()-50, 50);
-    
-    ofNoFill();
-    ofSetColor(0, 0, 255);
-    ofDrawCircle(ofGetWidth()/2, ofGetHeight()/2, 50);
+    for(int i=0;i<100;i++) {
+        for(int j=0;j<100;j++) {
+            ofNoFill();
+            ofSetColor(255, 255, 0);
+            ofDrawCircle(i*20, j*20, 10);
+        }
+    }
 }
 
 //--------------------------------------------------------------
