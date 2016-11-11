@@ -2,7 +2,7 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-
+    ofSetBackgroundColor(80,80,80);
 }
 
 //--------------------------------------------------------------
@@ -12,7 +12,16 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-
+    ofFill();
+    ofSetColor(255, 0, 0);
+    ofDrawCircle(50, 50, 50);
+    
+    ofSetColor(0, 255, 0, 50);
+    ofDrawCircle(ofGetWidth()-50, ofGetHeight()-50, 50);
+    
+    ofNoFill();
+    ofSetColor(0, 0, 255);
+    ofDrawCircle(ofGetWidth()/2, ofGetHeight()/2, 50);
 }
 
 //--------------------------------------------------------------
