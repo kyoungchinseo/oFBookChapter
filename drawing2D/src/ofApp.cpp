@@ -3,7 +3,8 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
     ofSetBackgroundColor(80,80,80);
-    scale = 1;
+    pScale = 1;
+    rScale = 1;
 }
 
 //--------------------------------------------------------------
@@ -13,9 +14,9 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    float x = 20*scale;
-    float y = 20*scale;
-    float radius = 10*scale;
+    float x = 20*pScale;
+    float y = 20*pScale;
+    float radius = 10*rScale;
     
     for(int i=0;i<100;i++) {
         for(int j=0;j<100;j++) {
@@ -28,18 +29,7 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-    if (key == 'a') {
-        scale = scale * 1.2;
-    } else if (key == 's') {
-        scale = scale * 0.9;
-    }
-    
-    if (scale > 20) {
-        scale = 20;
-    }
-    if (scale < 1.0) {
-        scale = 1.0;
-    }
+
 }
 
 //--------------------------------------------------------------
@@ -54,7 +44,8 @@ void ofApp::mouseMoved(int x, int y ){
 
 //--------------------------------------------------------------
 void ofApp::mouseDragged(int x, int y, int button){
-
+    pScale = x / 100;
+    rScale = y / 100;
 }
 
 //--------------------------------------------------------------
