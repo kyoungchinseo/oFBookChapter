@@ -26,4 +26,9 @@ class ofApp : public ofBaseApp{
     float width[200];
     float height[200];
     
+    int red[200];
+    int green[200];
+    int blue[200];
+    int alpha[200];
+    
 };

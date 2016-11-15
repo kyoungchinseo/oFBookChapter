@@ -9,6 +9,11 @@ void ofApp::setup(){
         posY[i] = ofRandom(0,ofGetHeight());
         width[i] = ofRandom(80,120);
         height[i]= ofRandom(80,120);
+        
+        red[i] = ofRandom(0,255);
+        green[i] = ofRandom(0,255);
+        blue[i] = ofRandom(0,255);
+        alpha[i] = ofRandom(0,255);
     }
 }
 
@@ -20,7 +25,7 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     for(int i=0;i<200;i++) {
-        ofSetColor(255,0,0,50);
+        ofSetColor(red[i],green[i],blue[i],alpha[i]);
         ofDrawRectangle(posX[i], posY[i], width[i], height[i]);
     }
 }
