@@ -3,27 +3,25 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
     ofSetBackgroundColor(80,80,80);
-    pScale = 1;
-    rScale = 1;
+    
+    for(int i=0;i<200;i++) {
+        posX[i] = ofRandom(0,ofGetWidth());
+        posY[i] = ofRandom(0,ofGetHeight());
+        width[i] = ofRandom(80,120);
+        height[i]= ofRandom(80,120);
+    }
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-
+    
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    float x = 20*pScale;
-    float y = 20*pScale;
-    float radius = 10*rScale;
-    
-    for(int i=0;i<100;i++) {
-        for(int j=0;j<100;j++) {
-            ofNoFill();
-            ofSetColor(0, 255, 255);
-            ofDrawCircle(i*x, j*y, radius);
-        }
+    for(int i=0;i<200;i++) {
+        ofSetColor(255,0,0,50);
+        ofDrawRectangle(posX[i], posY[i], width[i], height[i]);
     }
 }
 
@@ -44,8 +42,7 @@ void ofApp::mouseMoved(int x, int y ){
 
 //--------------------------------------------------------------
 void ofApp::mouseDragged(int x, int y, int button){
-    pScale = x / 100;
-    rScale = y / 100;
+
 }
 
 //--------------------------------------------------------------

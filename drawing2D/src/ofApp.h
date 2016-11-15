@@ -21,6 +21,9 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
-    float pScale;
-    float rScale;
+    float posX[200];
+    float posY[200];
+    float width[200];
+    float height[200];
+    
 };
