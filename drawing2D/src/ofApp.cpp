@@ -21,7 +21,7 @@ void ofApp::draw(){
     for(int i=0;i<100;i++) {
         for(int j=0;j<100;j++) {
             ofNoFill();
-            ofSetColor(255, 255, 0);
+            ofSetColor(0, 255, 255);
             ofDrawCircle(i*x, j*y, radius);
         }
     }
