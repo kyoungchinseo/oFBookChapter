@@ -2,11 +2,15 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    rectPanel = new RectPanel[200];
+    
+    rectPanel = new RectPanel*[200];
+    
+    //rectPanel = new RectPanel[200];
     
     ofSetBackgroundColor(80,80,80);
     for(int i=0;i<200;i++) {
-        rectPanel[i].setRectPanel(ofRandom(0,ofGetWidth()),
+        rectPanel[i] = new RectPanel();
+        rectPanel[i]->setRectPanel(ofRandom(0,ofGetWidth()),
                                 ofRandom(0,ofGetHeight()),
                                 ofRandom(80,120),
                                 ofRandom(80,120),
@@ -25,7 +29,7 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     for(int i=0;i<200;i++) {
-        rectPanel[i].draw();
+        rectPanel[i]->draw();
     }
 }
 
