@@ -23,7 +23,7 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
     
     
-    RectPanel rectPannel[200];
+    RectPanel rectPanel[200];
     
     
 };
