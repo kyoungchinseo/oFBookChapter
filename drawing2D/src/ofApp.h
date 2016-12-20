@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "RectPanel.h"
 
 class ofApp : public ofBaseApp{
 
@@ -21,14 +22,8 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
-    float posX[200];
-    float posY[200];
-    float width[200];
-    float height[200];
     
-    int red[200];
-    int green[200];
-    int blue[200];
-    int alpha[200];
+    RectPanel pattern[200];
+    
     
 };
