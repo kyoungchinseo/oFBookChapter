@@ -4,7 +4,7 @@
 void ofApp::setup(){
     ofSetBackgroundColor(80,80,80);
     for(int i=0;i<200;i++) {
-        pattern[i].setRectPanel(ofRandom(0,ofGetWidth()),
+        rectPannel[i].setRectPanel(ofRandom(0,ofGetWidth()),
                                 ofRandom(0,ofGetHeight()),
                                 ofRandom(80,120),
                                 ofRandom(80,120),
@@ -23,7 +23,7 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     for(int i=0;i<200;i++) {
-        pattern[i].draw();
+        rectPannel[i].draw();
     }
 }
 
