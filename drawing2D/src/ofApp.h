@@ -23,10 +23,6 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
     
     
-    RectPanel *rectPanel;
-    int numPanels;
-    int maxPanels;
-    
-    
+    vector<RectPanel> rectPanel;
     
 };
