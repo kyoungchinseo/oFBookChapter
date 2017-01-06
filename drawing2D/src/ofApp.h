@@ -24,6 +24,9 @@ class ofApp : public ofBaseApp{
     
     
     RectPanel *rectPanel;
+    int numPanels;
+    int maxPanels;
+    
     
     
 };

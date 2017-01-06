@@ -2,7 +2,9 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    rectPanel = new RectPanel[200];
+    maxPanels = 200;
+    numPanels = 0;
+    rectPanel = new RectPanel[maxPanels];
     
     ofSetBackgroundColor(80,80,80);
     for(int i=0;i<200;i++) {
@@ -24,7 +26,7 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    for(int i=0;i<200;i++) {
+    for(int i=0;i<numPanels;i++) {
         rectPanel[i].draw();
     }
 }
@@ -56,7 +58,17 @@ void ofApp::mousePressed(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mouseReleased(int x, int y, int button){
-
+    if (numPanels < maxPanels) {
+        rectPanel[numPanels].setRectPanel(x,
+                                      y,
+                                      ofRandom(80,120),
+                                      ofRandom(80,120),
+                                      ofRandom(0,255),
+                                      ofRandom(0,255),
+                                      ofRandom(0,255),
+                                      ofRandom(0,100));
+        numPanels++;
+    }
 }
 
 //--------------------------------------------------------------
