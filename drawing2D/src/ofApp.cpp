@@ -44,8 +44,8 @@ void ofApp::mouseMoved(int x, int y ){
 
 //--------------------------------------------------------------
 void ofApp::mouseDragged(int x, int y, int button){
-    pScale = x / 100;
-    rScale = y / 100;
+    pScale = float(x) / ofGetWidth() * 10.0;
+    rScale = float(y) / ofGetHeight() * 5.0;
 }
 
 //--------------------------------------------------------------
